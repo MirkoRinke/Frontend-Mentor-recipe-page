@@ -1,0 +1,387 @@
+@font-face {
+  font-family: "Outfit";
+  src: url("../assets/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("../assets/fonts/Outfit-VariableFont_wght.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "YoungSerif";
+  src: url("../assets/fonts/YoungSerif-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: "YoungSerif";
+  src: url("../assets/fonts/YoungSerif-Regular.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 100 900;
+}
+
+// 100: Thin
+// 200: Extra Light (Ultra Light)
+// 300: Light
+// 400: Normal (Regular)
+// 500: Medium
+// 600: Semi Bold (Demi Bold)
+// 700: Bold
+// 800: Extra Bold (Ultra Bold)
+// 900: Black (Heavy)
+
+// Colors //
+
+$white: hsl(0, 0%, 100%);
+
+$stone_100: hsl(30, 54%, 90%);
+$stone_150: hsl(30, 18%, 87%);
+$stone_600: hsl(30, 10%, 34%);
+$stone_900: hsl(24, 5%, 18%);
+
+$brown_800: hsl(14, 45%, 36%);
+
+$rose_800: hsl(332, 51%, 32%);
+$rose_50: hsl(330, 100%, 98%);
+
+/* @media breakpoints */
+
+/** 1500pxoder schmaler */
+// @media (max-width: $breakpoint-lg) {
+// }
+/** 900px oder schmaler */
+// @media (max-width: $breakpoint-md) {
+// }
+/** 500px oder schmaler */
+// @media (max-width: $breakpoint-sm) {
+// }
+/** 350px oder schmaler */
+// @media (max-width: $breakpoint-xs) {
+// }
+/** 300px oder schmaler */
+// @media (max-width: $breakpoint-xxs) {
+// }
+
+/** 1500pxoder schmaler */
+$breakpoint-lg: 1500px !default;
+
+/** 900px oder schmaler */
+$breakpoint-md: 900px !default;
+
+/** 500px oder schmaler */
+$breakpoint-sm: 500px !default;
+
+/** 350px oder schmaler */
+$breakpoint-xs: 350px !default;
+
+/** 300px oder schmaler */
+$breakpoint-xxs: 300px !default;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: $rose_800 $rose_50;
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 123px;
+  padding-bottom: 123px;
+  background-color: $stone_100;
+
+  @media (max-width: $breakpoint-sm) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  &--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 736px;
+    width: 100%;
+    border: 0px solid transparent;
+    border-radius: 24px;
+    background-color: $white;
+    padding: 40px;
+
+    @media (max-width: $breakpoint-sm) {
+      border-radius: 0px;
+      padding: 0px;
+    }
+
+    &--img {
+      width: 100%;
+      border: 0px solid transparent;
+      border-radius: 24px;
+
+      @media (max-width: $breakpoint-sm) {
+        border-radius: 0px;
+      }
+    }
+
+    &--title {
+      margin-top: 40px;
+      margin-bottom: 32px;
+      width: 100%;
+
+      @media (max-width: $breakpoint-sm) {
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+
+      &--heading {
+        font-family: "YoungSerif";
+        font-size: 40px;
+        color: $stone_900;
+        margin-bottom: 24px;
+        letter-spacing: 0px;
+        line-height: 100%;
+
+        @media (max-width: $breakpoint-sm) {
+          font-size: 36px;
+        }
+        @media (max-width: $breakpoint-xs) {
+          font-size: 28px;
+        }
+      }
+
+      &--textarea {
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0px;
+        color: $stone_600;
+
+        @media (max-width: $breakpoint-sm) {
+          width: 311px;
+        }
+
+        @media (max-width: $breakpoint-xs) {
+          width: unset;
+        }
+      }
+    }
+
+    &--preparation {
+      max-width: 100%;
+      width: 100%;
+      background-color: $rose_50;
+      padding: 28px;
+      border: 0px solid transparent;
+      border-radius: 12px;
+
+      @media (max-width: $breakpoint-sm) {
+        width: unset;
+        margin-left: 32px;
+        margin-right: 32px;
+      }
+
+      &--heading {
+        font-family: "YoungSerif";
+        font-size: 20px;
+        margin-bottom: 16px;
+        color: $rose_800;
+      }
+      &--list {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        gap: 8px;
+
+        &--item {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          line-height: 150%;
+          letter-spacing: 0px;
+          color: $stone_600;
+
+          @media (max-width: $breakpoint-sm) {
+            align-items: unset;
+          }
+
+          &--bold {
+            display: contents;
+            font-weight: bold;
+            padding-right: 3px;
+          }
+
+          &::before {
+            content: "•";
+            font-size: 22px;
+            color: $rose_800;
+            padding-inline: 8px 25px;
+
+            @media (max-width: $breakpoint-sm) {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    &--ingredients {
+      width: 100%;
+      margin-top: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid $stone_150;
+
+      @media (max-width: $breakpoint-sm) {
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+
+      &--heading {
+        font-family: "YoungSerif";
+        font-size: 28px;
+        margin-bottom: 16px;
+        color: $brown_800;
+      }
+
+      &--list {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        gap: 8px;
+
+        &--item {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          line-height: 150%;
+          color: $stone_600;
+
+          &::before {
+            content: "•";
+            font-size: 22px;
+            color: $brown_800;
+            padding-inline: 8px 25px;
+
+            @media (max-width: $breakpoint-sm) {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    &--instructions {
+      width: 100%;
+      margin-top: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid $stone_150;
+
+      @media (max-width: $breakpoint-sm) {
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+
+      &--heading {
+        font-family: "YoungSerif";
+        font-size: 28px;
+        margin-bottom: 16px;
+        color: $brown_800;
+      }
+
+      &--list {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        gap: 8px;
+
+        &--item {
+          display: flex;
+
+          &--number {
+            font-size: 16px;
+            font-weight: bold;
+            color: $brown_800;
+            padding-inline: 8px 16px;
+          }
+
+          &--textarea {
+            font-size: 16px;
+            color: $stone_600;
+            line-height: 150%;
+            &--bold {
+              display: inline-block;
+              font-size: 16px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    &--nutrition {
+      width: 100%;
+      margin-top: 32px;
+
+      @media (max-width: $breakpoint-sm) {
+        padding-left: 32px;
+        padding-right: 32px;
+        margin-bottom: 32px;
+      }
+
+      &--heading {
+        font-family: "YoungSerif";
+        font-size: 28px;
+        margin-bottom: 16px;
+        color: $brown_800;
+      }
+
+      &--textarea {
+        font-size: 16px;
+        color: $stone_600;
+        line-height: 150%;
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+
+      &--data_container {
+        display: flex;
+        flex-direction: column;
+
+        &--data {
+          display: flex;
+          border-bottom: 1px solid $stone_150;
+          padding-block: 12px;
+
+          &--items {
+            padding-inline: 32px;
+            color: $stone_600;
+            width: 50%;
+          }
+
+          &--items:nth-child(2n) {
+            color: $brown_800;
+            font-weight: bold;
+          }
+        }
+        &--data:first-child {
+          padding-top: 0px;
+        }
+
+        &--data:last-child {
+          border-bottom: 0px solid transparent;
+          padding-bottom: 0px;
+        }
+      }
+    }
+  }
+}
