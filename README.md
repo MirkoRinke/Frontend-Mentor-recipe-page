@@ -14,7 +14,6 @@ The main goal of this project was to practice structuring content in a clean, re
 ## 🔗 Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/recipe-page-4x9wNLUvhk)
-- [Live Site URL](https://splendid-biscuit-da8b01.netlify.app/)
 
 
 ## 🛠️ Built with
@@ -37,5 +36,6 @@ The main goal of this project was to practice structuring content in a clean, re
 
 ## ✍️ Author
 
-- Website - [My Github](https://github.com/MirkoRinke)
+- [Webiste](https://mirkorinke.dev)
+- [Github](https://github.com/MirkoRinke)
 - Frontend Mentor - [@MirkoRinke](https://www.frontendmentor.io/profile/MirkoRinke)
